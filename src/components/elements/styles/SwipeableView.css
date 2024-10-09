@@ -1,0 +1,18 @@
+.swipeable-container {
+    display: flex;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    margin-top: 3rem;
+  }
+  
+  .swipeable-content {
+    display: flex;
+    
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .swipeable-item {
+    flex: 0 0 0%;
+  }
+  

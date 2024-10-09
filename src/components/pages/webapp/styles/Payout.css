@@ -1,0 +1,263 @@
+select {
+    width: 100%;
+    height: 2.5rem;
+    background-color: var(--color--input);
+    border: 2px solid;
+    border-color: var(--color--input);
+    transition: border-color 0.3s ease-in-out;
+    padding: 5px 30px 5px 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    position: relative;
+    color: var(--color-text);
+    font-size: 1.2rem;
+    outline: none;
+    user-select: none;
+}
+
+select:active {
+    border-color: var(--color-links);
+    transition: border-color 0.3s ease-in-out;
+}
+
+.balance {
+    font-size: 3rem;
+}
+
+#currency_symbol {
+    margin-right: calc(var(--margin)/2);
+}
+
+.input_div a {
+    color: var(--color-text);
+    position: absolute;
+    margin-left: calc(var(--margin) * -1.5);
+    font-weight: 400;
+    font-size: 1.5rem;
+    right: 0;
+}
+
+.input_field {
+    padding-left: var(--margin);
+    color: var(--color-text);
+    font-size: 1.2rem;
+}
+
+.input_field::placeholder {
+    color: var(--color-hr);
+}
+
+.toggle_container {
+    margin-top: var(--margin);
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.toggle_container p {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.commission_label {
+    color: var(--color-links);
+    transition: 0.3s;
+}
+
+.commission_label.unactive {
+    color: var(--color-hr);
+    transition: 0.3s;
+}
+
+input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.switch {
+    margin-right: var(--margin);
+
+    text-indent: -9999px;
+    width: 50px;
+    height: 20px;
+    background: var(--color-hr);
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    position: relative;
+    transition: background 0.3s;
+}
+
+.switch:after {
+    content: '';
+    border: 3px solid var(--color-hr);
+    top: 5px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    background: var(--color-secondary-background);
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+input:checked+label:after {
+    border: 3px solid var(--color-links);
+    transform: translateX(20px);
+}
+
+input:checked+label {
+    background: var(--color-links);
+    transition: background 0.3s;
+}
+
+.commission_info {
+    display: flex;
+    align-items: center;
+    margin-top: var(--margin);
+}
+
+.commission_info i,
+p {
+    color: var(--color-hr);
+    user-select: none;
+}
+
+.commission_info i {
+    margin-right: 4px;
+}
+
+.payoutButtonContainer {
+    margin-top: var(--margin);
+    display: flex;
+    justify-content: center;
+}
+
+
+.payout_button {
+    background-color: var(--tg-theme-button-color);
+    color: var(--tg-theme-button-text-color);
+    width: 100%;
+    height: 3rem;
+    opacity: 0.4;
+}
+
+.payout_button.active {
+    opacity: 1;
+    
+}
+
+
+
+.balance::before {
+    content: attr(data-value);
+}
+
+
+.payout_container
+{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: var(--margin);
+    width: 100%;
+    height: 4rem;
+}
+
+.payout_container::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    top: 50%;
+    left: 50%;
+    opacity: 0%;
+    box-shadow: 0 0 15px 15px var(--color-nav-highlight);
+    transform: translate(-50%, -50%);
+    background: var(--color-nav-highlight);
+    z-index: 0;
+    transition: width 0s 0.3s, height 0s 0.3s, opacity 0.3s ease;
+    border-radius: 100%;
+    
+}
+
+.payout_container:active::after {
+    opacity: 100%;
+    transition: width 0.3s ease, height 0.3s ease, opacity 0s;
+    width: 500px;
+    height: 500px;
+}
+
+.payout_info_container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    z-index: 1;
+}
+
+#status_icon {
+    font-size: 1.7rem;
+    margin: 0;
+    margin-left: var(--margin);
+}
+
+
+.payout_container p {
+    color: var(--color-hr);
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin: 0;
+    
+}
+
+.payout_container h2 {
+    user-select: none;
+    color: var(--color-text);
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 5px;
+
+}
+
+.payout_icon
+{
+    height: 1.3rem;
+    width: 1.3rem;
+    margin-right: 3px;
+    user-select: none;
+}
+
+.payout_method
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.uil-exclamation-circle
+{
+    color: rgb(231, 62, 62)
+}
+
+.uil-clock {
+    color: var(--color-hr);
+}
+
+.payout_history {
+    width: 100%;
+}
+
+.payout_history_upper {
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+}
+
+.payout_history_lower {
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+}

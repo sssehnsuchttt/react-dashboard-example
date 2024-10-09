@@ -1,0 +1,90 @@
+:root {
+  --margin: 15px;
+  --navbar-height: 60px;
+  --color-nav-highlight: rgba(0, 0, 0, 0.4);
+
+}
+
+:root[data-theme="light"] {
+  --color-background: #f5f5f5;
+  --color-text: #2c2c2c;
+  --color-links: #007acc;
+  --color-highlight: #6d6d6d;
+  --color-hint: #3286be;
+  --color-secondary-background: #e9ecef;
+  --color--input: #dee2e6;
+  --color-navbar: #cacbd3;
+  --color-accept-button: #28a745;
+  --color-decline-button: #dc3545;
+  --color-text-error: #ff5c5c;
+  --color-text-accept: #00e271;
+  --color-hr: #73889e;
+  --color-nav-button: rgba(138, 140, 146, 0.15);
+  --color-text-buttons: #ffffff;
+  --color-notification: #dee2e6;
+  --color-alert: rgba(240, 240, 245, 0.9);
+  --color-footer-window: rgba(169, 171, 179, 0.8);
+  --color-input-border: rgb(151, 151, 151);
+  --color-alert-accept-button: #637da5;
+}
+
+
+ :root[data-theme="dark"] {
+  --color-background: #1f2030;
+  --color-text: #f8f8f2;
+  --color-links: #5c92e2;
+  --color-highlight: #44475a;
+  --color-hint: #82c6db;
+  --color-secondary-background: #282a36;
+  --color--input: #3e4153;
+  --color-navbar: #292d44;
+  --color-accept-button: rgb(19, 170, 95);
+  --color-decline-button: rgb(216, 68, 68);
+  --color-text-error: #eb4545;
+  --color-text-accept: rgb(0, 226, 113);
+  --color-hr: rgb(82, 88, 109);
+  --color-nav-button: rgba(82, 88, 109, 0.25);
+  --color-text-buttons: #FFFFFF;
+  --color-notification: #3e4153;
+  --color-alert: rgba(40, 42, 54, 0.8);
+  --color-footer-window: rgba(82, 88, 109, 0.8);
+  --color-input-border: rgb(126, 126, 126);
+  --color-alert-accept-button: #637da5;
+
+}  
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px var(--color--input) inset !important;
+  -webkit-text-fill-color: var(--color-text) !important;
+}
+
+input:-moz-autofill {
+  box-shadow: 0 0 0 30px var(--color--input) inset !important;
+  -moz-text-fill-color: var(--color-text) !important;
+}
+
+input:-ms-autofill {
+  box-shadow: 0 0 0 30px var(--color--input) inset !important;
+  -ms-text-fill-color: var(--color-text) !important;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 5px; 
+  background-color: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+  width: 5px; 
+  background-color: var(--color-hr);
+  border-radius: 6px;
+}
+

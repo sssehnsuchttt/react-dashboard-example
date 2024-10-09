@@ -1,0 +1,275 @@
+#info {
+  align-items: flex-start;
+}
+
+#bot_nickname {
+  display: flex;
+  flex-direction: column;
+}
+
+
+#bot_name {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+
+
+
+
+#bot_info {
+  margin: var(--margin);
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.avatar {
+  background: linear-gradient(to top, #47ba44, #99d163);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.avatar h1,
+.avatar img {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar h1 {
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 500;
+  font-size: 1.4rem;
+
+  color: white;
+  margin: 0;
+}
+
+#bot_info img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.unactive_avatar {
+  display: none;
+}
+
+.input_field {
+  height: 2.5rem;
+  border-style: solid;
+  margin: 0px;
+  outline: none;
+  box-shadow: none;
+  border-radius: inherit;
+  background-color: var(--color--input);
+  font-size: 1rem;
+  width: 100%;
+  color: var(--color-text);
+  transition: 0.3s ease-in-out;
+  border-width: 1px;
+  border-color: #ffffff00;
+}
+
+.input_field:focus {
+  border-color: var(--color-hint);
+  transition: 0.3s ease-in-out;
+  
+}
+
+.input_field.active {
+  border-color: #f52828;
+  transition: 0.3s ease-in-out;
+  
+}
+
+
+
+.input_div {
+  margin-top: 5px;
+  padding: 0px;
+  border-radius: 6px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+
+.input_container {
+  width: calc(50% - var(--margin)/2);
+  display: block;
+  margin-bottom: var(--margin);
+}
+
+label {
+  font-size: 1.2rem;
+  color: var(--color-text);
+  font-weight: 500;
+  user-select: none;
+}
+
+.input_block {
+  width: calc(100% - var(--margin)*2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: var(--margin);
+  margin-bottom: 0;
+}
+
+.accept_buttons {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: var(--margin);
+}
+
+button {
+  /* cursor: pointer; */
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  height: 2.6rem;
+  transition: 0.1s ease;
+  width: 150px;
+  overflow: hidden;
+  position: relative;
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+
+
+#accept_button {
+  background-color: var(--color-accept-button);
+  color: var(--color-text-buttons);
+
+}
+
+#decline_button {
+  background-color: var(--color-decline-button);
+  color: var(--color-text-buttons);
+
+}
+
+.stats_block {
+  width: calc(100% - var(--margin)*2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: var(--margin);
+}
+
+.chart_block {
+  width: calc(50% - var(--margin)/2);
+  
+}
+
+#pie_wrapper {
+  width: calc(100%);
+  margin-top: var(--margin);
+}
+
+.stats_text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: var(--margin);
+}
+
+.stats_text_field label {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.stats_text_field p {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-hr);
+  margin: 0;
+}
+
+.stats_text_field {
+  height: fit-content;
+  padding-left: calc(var(--margin)/2);
+  padding-right: calc(var(--margin)/2);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+
+}
+.loading.active {
+  left: 0;
+  top: 0;
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  backdrop-filter: blur(6px);
+}
+
+.loading {
+  display: none;
+}
+
+.loading_circle {
+  margin: 0.1rem;
+  border-radius: 50%;
+  background-color: var(--color-text-buttons);
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+#loading_1 {
+  animation: scaleAnimation 0.6s 0.2s infinite alternate;
+}
+
+#loading_2 {
+  animation: scaleAnimation 0.6s 0.4s infinite alternate;
+}
+
+#loading_3 {
+  animation: scaleAnimation 0.6s 0.6s infinite alternate;
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+@media screen and (max-width:969px) {
+  .input_block {
+    
+    width: calc(100% - var(--margin)*2);
+  }
+
+  .chart_block {
+    width: calc(100%);
+    margin-top: var(--margin);
+  }
+
+  .input_container {
+    width: 100%;
+    margin-bottom: var(--margin);
+  }
+}

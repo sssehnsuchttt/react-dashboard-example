@@ -1,0 +1,106 @@
+.alert_bg {
+    left: 0;
+    top: 0;
+    display: flex;
+    position: absolute;
+    width: 0vw;
+    height: 0vh;
+    background-color: rgba(0, 0, 0, 0.0);
+    transition: background-color 0.3s linear, width 0s 0.3s, height 0s 0.3s;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+}
+
+.alert_bg.active {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.611);
+    transition: background-color 0.3s linear, width 0s, height 0s;
+}
+
+.alert_window {
+    background-color: var(--color-secondary-background);
+    flex-direction: column;
+    border-radius: 15px;
+    width: 400px;
+    height: 200px;
+    display: flex; 
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: transform 0.3s ease-in-out, opacity 0.2s ease-in, visibility 0s 0.3s;
+}
+
+.alert_window.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0px);
+    transition: transform 0.3s ease-in-out, opacity 0.2s ease-out;
+}
+
+.header {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* background-color: var(--color-secondary-background); */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.header h1 {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.text_field h1 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin: var(--margin);
+}
+
+.text_field {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons_field {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: calc(var(--margin)/2);
+    margin-left: calc(var(--margin)/2);
+    margin-right: calc(var(--margin)/2);
+}
+
+.buttons_field button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-weight: 600;
+    font-size: 1.1rem;
+    background-color: var(--color-alert-accept-button);
+    color: #fff;
+
+}
+
+#alert_decline_button {
+    background-color: var(--color-decline-button);
+    color: #fff;
+    margin-left: calc(var(--margin)/2);
+}
+
+@media screen and (max-width:769px) {
+    .alert_window {
+        width: calc(100% - var(--margin)*4);
+    }
+}

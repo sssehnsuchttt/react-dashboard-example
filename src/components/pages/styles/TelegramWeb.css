@@ -1,0 +1,50 @@
+.WebApp {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--color-background);
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: hidden;
+}
+
+.containerWebApp {
+    display: flex;
+    min-width: 100vw;
+    max-width: 100vw;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: var(--margin);
+    overflow-x: hidden;
+    height: calc(100vh - 3rem);
+    overflow-y: auto;
+  
+  }
+  
+.ServerUnavailable {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--color-secondary-background);
+}
+
+
+.UnavailableContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: calc((var(--tg-viewport-stable-height) / 2) - (35vh / 2));
+    width: auto;
+    height: 35vh;
+
+}
+
+.UnavailableContainer h1 {
+    font-weight: 500;
+}
+.unavailable_animation {
+    width: calc(100vh/4);
+    height: calc(100vh/4);
+}

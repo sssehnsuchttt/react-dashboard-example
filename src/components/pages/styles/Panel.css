@@ -1,0 +1,84 @@
+.Panel {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  background-color: var(--color-background);
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-right: 5px;
+  color: var(--color-text);
+  transition: 0.3s ease-in-out;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: var(--margin);
+  overflow-x: hidden;
+
+}
+
+
+
+.container.unactive {
+  display: none;
+}
+
+.card {
+  /* box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.2); */
+  background-color: var(--color-secondary-background);
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
+}
+
+.cardHeader {
+  width: calc(100% - var(--margin)*2);
+  height: fit-content;
+  display: flex;
+  margin-top: var(--margin);
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.cardHeader h1 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 0;
+  user-select: none;
+}
+
+.space {
+  min-width: var(--margin);
+  min-height: var(--margin);
+}
+
+
+
+@media screen and (max-width:1100px) {
+  .card {
+    background-color: var(--color-secondary-background);
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:769px) {
+
+
+
+  .card {
+    width: 100%;
+  }
+}

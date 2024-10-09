@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <g class="layer">
+  <title>Layer 1</title>
+  <rect fill="#ffffff" height="15.1" id="svg_1" stroke-width="0" width="11.9" x="3.3" y="1.25"/>
+  <path d="m16.19,0c0.98,0 1.81,0.82 1.81,1.81l0,14.38c0,1.02 -0.83,1.81 -1.81,1.81l-14.38,0c-1.02,0 -1.81,-0.82 -1.81,-1.81l0,-14.38c0,-1.02 0.83,-1.81 1.81,-1.81l14.38,0zm-7.21,15.65c3.37,0 4.86,-2.66 4.86,-5.32c0,-3.74 -2.57,-7.98 -4.86,-7.98c-2.25,0 -4.85,4.24 -4.85,7.98c0,2.66 1.49,5.32 4.85,5.32z" fill="#ed1c24" fill-rule="evenodd" id="mts"/>
+ </g>
+</svg>

@@ -1,0 +1,176 @@
+.Auth {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--color-background);
+    align-items: center;
+    justify-content: center;
+}
+
+.AuthCard {
+    background-color: var(--color-secondary-background);
+    width: 30rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+.AuthLogo {
+    margin-bottom: var(--margin);
+}
+
+.AuthForm {
+    display: flex;
+    flex-direction: column;
+    margin: var(--margin);
+    width: calc(100% - var(--margin) *2);
+    align-items: center;
+}
+
+.AuthField {
+    position: relative;
+    height: 2.5rem;
+    margin: 0px;
+    outline: none;
+    box-shadow: none;
+    border-radius: 6px;
+    border-style: solid;
+    border-color: var(--color-input-border);
+    border-width: 1px;
+    background-color: var(--color-secondary-background);
+    font-size: 1rem;
+    width: 100%;
+    color: var(--color-text);
+    transition: border-color 0.3s ease-in-out;
+    padding: var(--margin);
+}
+
+.AuthFieldContainer {
+    position: relative;
+    width: 100%;
+    margin-bottom: var(--margin);
+}
+
+
+.AuthPlaceholder {
+    background-color: var(--color-secondary-background);
+    font-weight: 400;
+    font-size: 1rem;
+    position: absolute;
+    top: 50%;
+    left: var(--margin);
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    color: var(--color-input-border);
+    pointer-events: none;
+    padding: 0px;
+    margin: 0px;
+    line-height: 1;
+}
+
+.AuthField:focus + .AuthPlaceholder,
+.AuthField:not(:placeholder-shown) + .AuthPlaceholder {
+    top: 0%;
+    left: calc(var(--margin)/2 - var(--margin)/4);
+    font-size: 1rem;
+    color: var(--color-hint);
+    padding-left: calc(var(--margin)/4);
+    padding-right: calc(var(--margin)/4);
+}
+
+.AuthField:focus, .AuthField:not(:placeholder-shown) {
+    border-color: var(--color-hint);
+    transition: 0.3s ease-in-out;
+}
+
+
+#AuthButton {
+    margin: 0;
+    background-color: var(--color-accept-button);
+    color: var(--color-text-buttons);
+    height: 2.5rem;
+    width: unset;
+    min-width: 11rem;
+    padding-left: var(--margin);
+    padding-right: var(--margin);
+}
+
+
+
+.AuthError {
+    margin: 0;
+    width: 100%;
+    display: flex;
+}
+
+.AuthErrorField {
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    align-items: center;
+    margin-bottom: var(--margin);
+    overflow: hidden;
+    
+}
+
+.AuthError h1,
+.AuthError i {
+    font-weight: 500;
+    color: var(--color-text-error);
+    margin: 0;
+    font-size: 1rem;
+    transform: translateY(calc(var(--margin) * -1.4));
+    visibility: hidden;
+    transition: transform 0.2s ease-in-out, visibility 0s 0.2s;
+}
+
+.AuthError h1.active,
+.AuthError i.active {
+    visibility: visible;
+    transform: translateY(0);
+    transition: transform 0.2s ease-in-out, visibility 0s;
+}
+
+
+.AuthError i {
+    margin-right: 0.3rem;
+}
+
+.AuthSignup {
+    margin: 0;
+    width: 100%;
+    display: flex;
+}
+
+.AuthSignupField {
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    align-items: center;
+    margin-top: var(--margin);
+    overflow: hidden;
+}
+
+.AuthSignup h1, a {
+    font-weight: 400;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.AuthSignup a {
+    color: var(--color-links);
+}
+
+@media screen and (max-width:550px) {
+    :root {
+        --margin: 10px;
+
+    }
+
+    .AuthCard {
+        margin-bottom: calc(100vh * (0.5/3));
+        width: calc(100% - var(--margin) * 4);
+    }
+}

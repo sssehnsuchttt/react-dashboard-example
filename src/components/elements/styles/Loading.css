@@ -1,0 +1,61 @@
+.loading_screen {
+    position: absolute;
+    background-color: var(--color-secondary-background);
+    /* background-color: rgba(0,0,0,0.2); */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 10;
+    /* backdrop-filter: blur(6px); */
+    height: calc(100vh - 3rem);
+    bottom: 0;
+    width: 100vw;
+    animation-fill-mode: forwards;
+}
+
+.loading_screen.invisible {
+    visibility: hidden;
+}
+
+.loading_screen.invisible_animated {
+    animation: fadeOut 500ms ease-in-out 0.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.loading_animations {
+    width: calc(100vh/3);
+    height: calc(100vh/3);
+    margin-top: calc((var(--tg-viewport-stable-height)/2) - ((100vh/3)/2));
+
+}
+
+@keyframes disappearingAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.15);
+
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+.loading_animations.invisible {
+    animation: disappearingAnimation 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
