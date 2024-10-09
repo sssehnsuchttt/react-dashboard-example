@@ -49,26 +49,30 @@
 ### Шаги для локальной установки фронтенда:
 
 1. **Клонируйте репозиторий:**<br/>
-  `git clone https://github.com/sssehnsuchttt/react-dashboard-example.git && cd react-dashboard-example`
-2. **Установите зависимости:**<br/>
+  `git clone https://github.com/sssehnsuchttt/react-dashboard-example.git`
+2. **Перейдите в папку репозитория:**</br>
+  `cd react-dashboard-example`
+3. **Установите зависимости:**<br/>
    `npm install`
-3. **Запустите проект в режиме разработки:**<br/>
+4. **Запустите проект в режиме разработки:**<br/>
    `npm run build`
-4. **При необходимости измените адрес сайта, на который посылаются запросы, в `src/index.js`.**
+5. **При необходимости измените адрес сайта, на который посылаются запросы, в `src/index.js`.**
 
 ---
 
 ### Шаги для локальной установки бэкенда:
 
 1. **Клонируйте репозиторий:**<br/>
-  `git clone https://github.com/sssehnsuchttt/dashboard-backend-example.git && cd dashboard-backend-example`
-2. **Создайте и активируйте виртуальное окружение:**<br/>
+  `git clone https://github.com/sssehnsuchttt/dashboard-backend-example.git`
+2. **Перейдите в папку репозитория:**</br>
+  `cd dashboard-backend-example`
+3. **Создайте и активируйте виртуальное окружение:**<br/>
    `python -m venv venv && source venv/bin/activate` (или `venv\Scripts\activate` для Windows)
-3. **Установите зависимости:**<br/>
+4. **Установите зависимости:**<br/>
    `pip install -r requirements.txt`
-4. **Настройте файл `settings.ini`:**<br/>
+5. **Настройте файл `settings.ini`:**<br/>
    Вам нужно будет вставить такие данные, как токен вашего бота, путь к базе данных и другие параметры
-5. **Запустите проект:**<br/>
+6. **Запустите проект:**<br/>
    `python main.py`
 
 ## Скриншоты проекта
