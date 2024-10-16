@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <g class="layer">
+  <title>Layer 1</title>
+  <g id="g1">
+   <path d="m5,11.13l5.94,10.63l0,6.5l-5.93,10.63l-0.01,-27.75z" fill="#5b57a2" id="path66"/>
+   <path d="m27.8,17.88l5.57,-3.38l11.39,0l-16.95,10.38l0,-7z" fill="#d90751" id="path68"/>
+   <path d="m27.76,11.13l0.04,14l-5.95,-3.63l0,-21l5.92,10.63z" fill="#fab718" id="path70"/>
+   <path d="m44.75,14.5l-11.39,0l-5.6,-3.38l-5.92,-10.63l22.9,14z" fill="#ed6f26" id="path72"/>
+   <path d="m27.8,38.88l0,-6.88l-5.95,-3.5l0,21l5.95,-10.63z" fill="#63b22f" id="path74"/>
+   <path d="m33.35,35.5l-22.41,-13.75l-5.94,-10.63l39.73,24.38l-11.38,0z" fill="#1487c9" id="path76"/>
+   <path d="m21.85,49.5l5.95,-10.63l5.55,-3.38l11.38,0l-22.88,14z" fill="#017f36" id="path78"/>
+   <path d="m5.01,38.88l16.88,-10.38l-5.67,-3.5l-5.28,3.25l-5.93,10.63z" fill="#984995" id="path80"/>
+  </g>
+ </g>
+</svg>
