@@ -17,7 +17,7 @@ function App() {
         <NotificationProvider>
           <AlertProvider>
 
-            <Router basename="/react-dashboard-example">
+            <Router basename="/dashboard_example">
               <Routes>
                 <Route exact path="/auth" element={<Auth />} />
                 <Route exact path="/panel" element={<Panel />} />
