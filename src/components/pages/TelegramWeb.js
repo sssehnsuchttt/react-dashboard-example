@@ -57,7 +57,7 @@ function WebApp() {
         root.style.setProperty('--color-links', tg.themeParams.link_color);
         root.style.setProperty('--color-text', tg.themeParams.text_color);
         root.style.setProperty('--color-hr', tg.themeParams.hint_color);
-        root.style.setProperty('--color-background', tg.themeParams.bg_color);
+        root.style.setProperty('--color-background', tg.themeParams.section_bg_color);
         root.style.setProperty('--color-section-separator', tg.themeParams.section_separator_color);
         root.style.setProperty('--color-secondary-background', tg.themeParams.secondary_bg_color);
         root.style.setProperty('--color--input', tg.themeParams.bg_color);

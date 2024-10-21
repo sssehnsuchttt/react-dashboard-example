@@ -80,12 +80,12 @@ input:-ms-autofill {
 
 
 ::-webkit-scrollbar {
-  width: 5px; 
+  width: 3px; 
   background-color: transparent; 
 }
 
 ::-webkit-scrollbar-thumb {
-  width: 5px; 
+  width: 3px; 
   background-color: var(--color-hr);
   border-radius: 6px;
 }
