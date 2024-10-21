@@ -13,7 +13,6 @@ const BarComponent = ({ data, label, symbol = "" }) => {
     const ctx = chartRef.current.getContext("2d");
 
     if (chartInstanceRef.current) {
-      // Если у нас уже есть экземпляр графика, удаляем его перед созданием нового
       chartInstanceRef.current.destroy();
     }
 
@@ -26,6 +25,7 @@ const BarComponent = ({ data, label, symbol = "" }) => {
             label: label,
             data: data.map((item) => item.amount),
             backgroundColor: getComputedStyle(document.documentElement).getPropertyValue("--color-links"),
+            borderRadius: 5,
           },
         ],
       },
@@ -65,6 +65,7 @@ const BarComponent = ({ data, label, symbol = "" }) => {
 
   return <canvas ref={chartRef} style={{ width: "100%", maxHeight: "18rem"}} />;
 };
+
 
 const DoughnutComponent = ({ data }) => {
     const totalValue = data.reduce((total, item) => total + item.value, 0);
