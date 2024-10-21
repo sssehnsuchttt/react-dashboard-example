@@ -376,45 +376,47 @@ function Payout(props) {
                     </div>
                 </div>
 
-                <div className="space"></div>
+                
                 {payoutsHistory.length > 0 ? (
-                    <div className="card" id="link">
-                        <div className="cardHeader">
-                            <h1>История выводов</h1>
-                        </div>
+                    <div>
                         <div className="space"></div>
-                        {payoutsHistory.map((payout, index) => (
-                            <div className="payout_container" key={index} onClick={() => handlePayoutHistory(payout.amount, payout.amount_orig, payout.commission_type, payout.props, payout.method, payout.bank)}>
-
-                                <div className="payout_info_container">
-                                    <div className="payout_history">
-                                        <div className="payout_history_upper">
-                                            <h2>{typeof parseFloat(payout.amount) === 'number' ? parseFloat(payout.amount).toLocaleString('ru-RU') + '₽' : '' || <Skeleton width={100} />}</h2>
-                                            <h2 className="payout_history_props">{payout.props}</h2>
-                                        </div>
-                                        <div className="payout_history_lower">
-                                            <div className="payout_method">
-                                                <img className="payout_icon" src={process.env.PUBLIC_URL + `/icons/${payout.method}.svg`} alt={payout.bank} />
-                                                <p>{payout.method_str}</p>
-                                            </div>
-                                            <p>{payout.date}</p>
-                                        </div>
-                                    </div>
-
-                                    <i
-                                        id="status_icon"
-                                        className={`uil ${payout.status_str === 'DONE'
-                                            ? 'uil uil-check-circle'
-                                            : payout.status_str === 'CANCELED'
-                                                ? 'uil uil-exclamation-circle'
-                                                : 'uil-clock'
-                                            }`}
-                                    ></i>
-                                </div>
+                        <div className="card" id="link">
+                            <div className="cardHeader">
+                                <h1>История выводов</h1>
                             </div>
-                        ))}
+                            <div className="space"></div>
+                            {payoutsHistory.map((payout, index) => (
+                                <div className="payout_container" key={index} onClick={() => handlePayoutHistory(payout.amount, payout.amount_orig, payout.commission_type, payout.props, payout.method, payout.bank)}>
 
-                        <div className="space"></div>
+                                    <div className="payout_info_container">
+                                        <div className="payout_history">
+                                            <div className="payout_history_upper">
+                                                <h2>{typeof parseFloat(payout.amount) === 'number' ? parseFloat(payout.amount).toLocaleString('ru-RU') + '₽' : '' || <Skeleton width={100} />}</h2>
+                                                <h2 className="payout_history_props">{payout.props}</h2>
+                                            </div>
+                                            <div className="payout_history_lower">
+                                                <div className="payout_method">
+                                                    <img className="payout_icon" src={process.env.PUBLIC_URL + `/icons/${payout.method}.svg`} alt={payout.bank} />
+                                                    <p>{payout.method_str}</p>
+                                                </div>
+                                                <p>{payout.date}</p>
+                                            </div>
+                                        </div>
+
+                                        <i
+                                            id="status_icon"
+                                            className={`uil ${payout.status_str === 'DONE'
+                                                ? 'uil uil-check-circle'
+                                                : payout.status_str === 'CANCELED'
+                                                    ? 'uil uil-exclamation-circle'
+                                                    : 'uil-clock'
+                                                }`}
+                                        ></i>
+                                    </div>
+                                </div>
+                            ))}
+
+                        </div>
                     </div>
                 ) : (null)}
             </div>

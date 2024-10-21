@@ -403,7 +403,7 @@ h1,
 
 .navbarHorizontal {
     transform: unset;
-    background-color: var(--color-secondary-background);
+    background-color: var(--color-background);
     width: 100vw;
     min-height: 3rem;
     display: flex;

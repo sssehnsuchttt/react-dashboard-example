@@ -83,12 +83,15 @@ a {
   .card {
     width: 100%;
     margin: 0%;
-    flex: 1;
     border-radius: 0%
   }
 
+  .card:last-child {
+    flex: 1;
+  }
+
   .space {
-    min-height: calc(var(--margin)/2);
+    min-height: calc(var(--margin)/4);
   }
 
 }

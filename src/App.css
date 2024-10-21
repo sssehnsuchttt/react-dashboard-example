@@ -26,6 +26,7 @@
   --color-footer-window: rgba(169, 171, 179, 0.8);
   --color-input-border: rgb(151, 151, 151);
   --color-alert-accept-button: #637da5;
+  --color-section-separator: #85898d;
 }
 
 
@@ -50,6 +51,7 @@
   --color-footer-window: rgba(82, 88, 109, 0.8);
   --color-input-border: rgb(126, 126, 126);
   --color-alert-accept-button: #637da5;
+  --color-section-separator: #13141b;
 
 }  
 

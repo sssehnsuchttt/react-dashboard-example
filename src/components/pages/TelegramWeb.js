@@ -3,10 +3,10 @@ import "./styles/TelegramWeb.css";
 import axios from "axios";
 import { site } from "../../config.js";
 import RequestHandler from "../../ProtectedRequest";
+import { Referer } from "./webapp/Referer";
 import { Payout } from "./webapp/Payout";
-import { Stats } from "./webapp/Stats.js"
-
 import { useLoading } from "../elements/Loading"
+import { NavbarHorizontal, NavbarHorizontalButton } from "../elements/Navbar";
 import Lottie from "lottie-react";
 import unavailable_animation from "../../lottie/sad_out.json"
 import SwipeableView from "../elements/SwipeableView";
@@ -20,6 +20,7 @@ function WebApp() {
     const [initData, setInitData] = useState();
     const [botValue, setBotValue] = useState();
     const [checkData, setCheckData] = useState();
+    const [isHidden, setIsHidden] = useState(false);
     const [isError, setIsError] = useState(false);
     const [activeSection, setActiveSection] = useState("home");
     const webAppScroller = useRef(null);
@@ -56,9 +57,10 @@ function WebApp() {
         root.style.setProperty('--color-links', tg.themeParams.link_color);
         root.style.setProperty('--color-text', tg.themeParams.text_color);
         root.style.setProperty('--color-hr', tg.themeParams.hint_color);
-        root.style.setProperty('--color-background', tg.themeParams.secondary_bg_color);
-        root.style.setProperty('--color-secondary-background', tg.themeParams.bg_color);
-        root.style.setProperty('--color--input', tg.themeParams.secondary_bg_color);
+        root.style.setProperty('--color-background', tg.themeParams.bg_color);
+        root.style.setProperty('--color-section-separator', tg.themeParams.section_separator_color);
+        root.style.setProperty('--color-secondary-background', tg.themeParams.secondary_bg_color);
+        root.style.setProperty('--color--input', tg.themeParams.bg_color);
         root.style.setProperty('--color-nav-highlight', `rgba(${parseInt(tg.themeParams.hint_color.slice(1), 16) >> 16 & 255}, ${parseInt(tg.themeParams.hint_color.slice(1), 16) >> 8 & 255}, ${parseInt(tg.themeParams.hint_color.slice(1), 16) & 255}, 0.3)`);
     }, [])
     useEffect(() => {
@@ -71,13 +73,26 @@ function WebApp() {
 
     if (checkData) {
         const botRequest = new RequestHandler(site, botValue, tg.initDataUnsafe.hash, tg.initData);
-        if (checkData.user === "admin")
+        if (checkData.user === "referer")
         {
             return (
                 <div className="WebApp">
                     <SkeletonTheme borderRadius="10px" baseColor={document.documentElement.style.getPropertyValue('--color--input')} highlightColor={document.documentElement.style.getPropertyValue('--color-nav-highlight')}>
                     <SwipeableView>
-                        <Stats className="containerWebApp" initData={initData} botRequest={botRequest} text="Главная"></Stats>
+                        <Referer className="containerWebApp" initData={initData} botRequest={botRequest} text="Главная"></Referer>
+                        <Payout className="containerWebApp" initData={initData} botRequest={botRequest} text="Вывод"></Payout>
+                    </SwipeableView>
+                    </SkeletonTheme>
+                    
+                </div>
+            );
+        }
+        else if (checkData.user === "admin")
+        {
+            return (
+                <div className="WebApp">
+                    <SkeletonTheme borderRadius="10px" baseColor={document.documentElement.style.getPropertyValue('--color--input')} highlightColor={document.documentElement.style.getPropertyValue('--color-nav-highlight')}>
+                    <SwipeableView>
                         <Payout className="containerWebApp" initData={initData} botRequest={botRequest} text="Вывод"></Payout>
                     </SwipeableView>
                     </SkeletonTheme>
